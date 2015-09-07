@@ -1,16 +1,19 @@
 language: node_js
 node_js:
-  - "iojs"
-  - "0.10"
-  - "0.12"
+- iojs
+- '0.10'
+- '0.12'
 os:
-  - linux
-  - osx
-  - windows
+- linux
+- osx
+- windows
 before_script:
-  - npm install -g istanbul
-  - npm install -g mocha
-  - npm install -g coveralls
+- npm install -g istanbul
+- npm install -g mocha
+- npm install -g coveralls
 after_script:
-  - npm run coverage
-  - npm run coveralls
+- npm run coverage
+- npm run coveralls
+notifications:
+  slack:
+    secure: VxCJxxibSvP+yb5YQVD4zpE6H6tCJ3h7Pkx8sR6+KhCM0PTledGmMtJrJO1KutEWh3rNnRESedCRT0vfOsJLTKfCHBNPYNFBHGZRAOEtclMVmRNBini8CrG2exWHnjvuqw8ByPbrrZrZu0QXIO9T5lya57AR/V3M5TRMGPgohRmTgMAC+ehRtRw8RqJOKAHFPZScOam5TUyPjH10HvOyYQeB15OWT0gJpWjEPQ962sNdbjWa/B8IG8QcaL8G1uHkew+VzhBGJdIaKVrLxrlpdURBhV6H3jgNauFM0Nev+sG36CxPNJv6pinMpzX4/GugQjiOv3LfKzbJ8k7gzL2pJbOdGqN6EFnneLFhqLogAxcIu56n1qNtGDH0M9m3xD7+7ThgqNtQr9AC9Dsy0RGuFZQIs3KNHaZujc4plrY7jBPaijMbSR/FApdcy9V8C0EYlv4V5fmb8CB2CGmP+O7jcZoi7c/DexUblw5C+jhdf7JU3hPVbnTWlhn8Zer/AJda0lpm/3cxtln4S7L92Wf3m+cEVxWhyZAiQCNby1oymn9u+SlY+X1KhpNOeoWQQWFyBefJJV3phOQMRrwQy8b+bmUkrCHu6Cv07BLetLQ3LYZ65hGVAqXyrY3Z9GZvW6aeg7Xr97eooDBhbMTD9+3T8AxQB8OVtd4z06TxKcXoAh4=

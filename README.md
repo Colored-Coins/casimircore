@@ -1,4 +1,5 @@
-# Casimir Core [![Build Status][travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# Casimir Core
+[![Build Status][travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Slack Channel][slack-image]][slack-url]
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
@@ -207,5 +208,7 @@ MIT © [thehobbit85]()
 [daviddm-url]: https://david-dm.org/Colored-Coins/casimircore
 [coveralls-image]: https://coveralls.io/repos/Colored-Coins/casimircore/badge.svg
 [coveralls-url]: https://coveralls.io/r//Colored-Coins/casimircore
-[mocha]:https://www.npmjs.com/package/mocha
-[gulp]:http://gulpjs.com/
+[slack-image]: http://slack.coloredcoins.org/badge.svg
+[slack-url]: http://slack.coloredcoins.org
+[mocha]: https://www.npmjs.com/package/mocha
+[gulp]: http://gulpjs.com/

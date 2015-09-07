@@ -15,6 +15,10 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "prepublish": "gulp prepublish"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Colored-Coins/casimircore.git"
+  },
   "main": "lib/index.js",
   "keywords": [],
   "devDependencies": {
