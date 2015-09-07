@@ -3,6 +3,10 @@ node_js:
   - "iojs"
   - "0.10"
   - "0.12"
+os:
+  - linux
+  - osx
+  - windows
 before_script:
   - npm install -g istanbul
   - npm install -g mocha
