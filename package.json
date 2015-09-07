@@ -1,14 +1,11 @@
 {
   "name": "casimircore",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The core modules for the Casimir webapp framework",
   "author": {
     "name": "thehobbit85",
     "email": "thehobbit85@gmail.com"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "test": "gulp",
     "coverage": "istanbul cover _mocha -- -R spec",
