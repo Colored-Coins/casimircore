@@ -1,7 +1,7 @@
 {
   "name": "casimircore",
   "version": "0.1.0",
-  "description": "The modules for the Casimir webapp framework",
+  "description": "The core modules for the Casimir webapp framework",
   "author": {
     "name": "thehobbit85",
     "email": "thehobbit85@gmail.com"
