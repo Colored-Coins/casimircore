@@ -2,7 +2,7 @@
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-> The Core modules for the Casimir webapp framework
+> The core modules for the Casimir webapp framework
 
 
 ### Install
@@ -201,11 +201,11 @@ MIT © [thehobbit85]()
 
 [npm-image]: https://badge.fury.io/js/casimircore.svg
 [npm-url]: https://npmjs.org/package/casimircore
-[travis-image]: https://travis-ci.org/casimircore.svg?branch=master
-[travis-url]: https://travis-ci.org/casimircore
-[daviddm-image]: https://david-dm.org/casimircore.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/casimircore
-[coveralls-image]: https://coveralls.io/repos/casimircore/badge.svg
-[coveralls-url]: https://coveralls.io/r//casimircore
+[travis-image]: https://travis-ci.org/Colored-Coins/casimircore.svg?branch=master
+[travis-url]: https://travis-ci.org/Colored-Coins/casimircore
+[daviddm-image]: https://david-dm.org/Colored-Coins/casimircore.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/Colored-Coins/casimircore
+[coveralls-image]: https://coveralls.io/repos/Colored-Coins/casimircore/badge.svg
+[coveralls-url]: https://coveralls.io/r//Colored-Coins/casimircore
 [mocha]:https://www.npmjs.com/package/mocha
 [gulp]:http://gulpjs.com/
