@@ -17,7 +17,7 @@
     "url" : "https://github.com/Colored-Coins/casimircore.git"
   },
   "main": "lib/index.js",
-  "keywords": [],
+  "keywords": ["server", "framework", "webapp", "database", "mongoose", "users", "websites"],
   "devDependencies": {
     "gulp": "^3.6.0",
     "gulp-standard": "^5.1.0",
