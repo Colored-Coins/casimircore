@@ -27,6 +27,7 @@
     "websites"
   ],
   "devDependencies": {
+    "estraverse": "^4.1.1",
     "gulp": "^3.6.0",
     "gulp-coveralls": "^0.1.0",
     "gulp-exclude-gitignore": "^1.0.0",
@@ -63,6 +64,7 @@
     "mongoose": "4.1.12",
     "mongoose-merge-plugin": "0.0.5",
     "mongoose-time": "^0.1.0",
+    "on-finished": "^2.3.0",
     "passport": "^0.3.0",
     "passport-http": "^0.3.0",
     "passport-http-bearer": "^1.0.1",
