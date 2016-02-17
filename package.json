@@ -61,7 +61,7 @@
     "lodash": "^3.10.1",
     "merge": "^1.2.0",
     "moment": "^2.10.6",
-    "mongoose": "4.1.12",
+    "mongoose": "~4.4.3",
     "mongoose-merge-plugin": "0.0.5",
     "mongoose-time": "^0.1.0",
     "on-finished": "^2.3.0",
