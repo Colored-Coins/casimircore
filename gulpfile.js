@@ -14,7 +14,7 @@ var isparta = require('isparta')
 // require('babel-core/register')
 
 gulp.task('static', function () {
-  return gulp.src(path.join(__dirname, '**/*.js'))
+  return gulp.src('./**/*.js')
     .pipe(excludeGitignore())
     .pipe(standard())
     .pipe(standard.reporter('default', {
@@ -28,7 +28,7 @@ gulp.task('nsp', function (cb) {
 })
 
 gulp.task('pre-test', function () {
-  return gulp.src(path.join(__dirname, 'lib/**/*.js'))
+  return gulp.src('./lib/**/*.js')
     .pipe(istanbul({
       includeUntested: true,
       instrumenter: isparta.Instrumenter
@@ -39,7 +39,7 @@ gulp.task('pre-test', function () {
 gulp.task('test', ['pre-test'], function (cb) {
   var mochaErr
 
-  gulp.src(path.join(__dirname, 'test/**/*.js'))
+  gulp.src('./test/**/*.js')
     .pipe(plumber())
     .pipe(mocha({reporter: 'spec'}))
     .on('error', function (err) {

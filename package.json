@@ -28,7 +28,7 @@
   ],
   "devDependencies": {
     "estraverse": "^4.1.1",
-    "gulp": "^3.6.0",
+    "gulp": "^3.9.0",
     "gulp-coveralls": "^0.1.0",
     "gulp-exclude-gitignore": "^1.0.0",
     "gulp-istanbul": "^0.9.0",
