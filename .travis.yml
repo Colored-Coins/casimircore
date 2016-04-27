@@ -6,7 +6,7 @@ node_js:
   - '0.12'
 os:
   - linux
-  - windows
+  - osx
 before_script:
   - npm install -g istanbul
   - npm install -g mocha
