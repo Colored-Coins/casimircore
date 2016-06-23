@@ -1,6 +1,6 @@
 {
   "name": "casimircore",
-  "version": "0.8.12",
+  "version": "0.8.17",
   "description": "The core modules for the Casimir webapp framework",
   "author": {
     "name": "thehobbit85",
@@ -81,6 +81,8 @@
     "uuid": "^2.0.1",
     "winston": "^1.0.1",
     "winston-mail": "^0.4.0",
-    "sequelize": "3.22.0"
+    "sequelize": "3.22.0",
+    "winston-logzio": "^1.0.0",
+    "winston-mail": "^0.4.0"
   }
 }
