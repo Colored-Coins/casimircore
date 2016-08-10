@@ -18,7 +18,7 @@ gulp.task('static', function () {
     .pipe(excludeGitignore())
     .pipe(standard())
     .pipe(standard.reporter('default', {
-      breakOnError: true,
+      breakOnError: false,
       breakOnWarning: false
     }))
 })
