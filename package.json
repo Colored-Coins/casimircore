@@ -66,6 +66,7 @@
     "mongoose": "~4.4.3",
     "mongoose-merge-plugin": "0.0.5",
     "mongoose-time": "^0.1.0",
+    "morgan": "^1.7.0",
     "on-finished": "^2.3.0",
     "passport": "^0.3.0",
     "passport-http": "^0.3.0",
