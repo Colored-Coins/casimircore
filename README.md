@@ -122,7 +122,7 @@ var logentries_api_key = 'fdsfdf23fewfew'
 
 var log_settings = {
   env: env,
-  logentries_api_ley: logentries_api_key,
+  logentries_api_key: logentries_api_key,
   log_dir: './log'
 }
 
