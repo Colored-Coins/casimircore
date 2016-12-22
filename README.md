@@ -45,12 +45,7 @@ console.log(casimir_core)
   authentication: {
     verify_token,
     verify_specific_user_token,
-    check_access,
-    issue_token
-  },
-  block_explorer: {
-    get,
-    post
+    check_access
   }
 }
 ```
@@ -58,28 +53,20 @@ console.log(casimir_core)
 ### Authentication
 
 ```js
-var secret = 'helloKitty'
-
-var callback = function (token, decoded, errmsg, req, res, next) {
-  var User = db.get_model('User')
-  User.findOne({ user_name: decoded.iss }, function (err, user) {
-    if (err) {
-      console.warn(err)
-      return next(errmsg)
-    }
-    if (!user) return next()
-    if (user.black_list.indexOf(token) !== -1) {
-      console.warn('Token has been used')
-      return next(errmsg)
-    }
+var verify_callback = function (jwt_token, req, res, next) {
+  get_user_by_token(jwt_token, function (err, user) {
+    if (err) return next(err)
     req.user = user
-    if (decoded.type === 'api_key') console.log(token, '-', req.path)
-    req.user.requestToken = {token: token, decoded: decoded}
-    return next()
+    next()
   })
 }
 
-var authentication = casimir_core.authentication(secret, callback)
+var access_callback = function (req, res, next) {
+  // reaches here if there is no req.user
+  res.status(401).send('Not Authorized')
+}
+ 
+var authentication = casimir_core.authentication(verify_callback, access_callback)
 ```
 
 ### DB
@@ -99,12 +86,6 @@ db.init(settings, mongoose, function (err, mongoose) {
   if (err) return console.error(err)
   console.log('connected to db')
 })
-```
-
-### BLOCK-EXPLORER
-
-```js
-var block_explorer = casimir_core.block_explorer(explorerURI)
 ```
 
 ### Error
@@ -145,11 +126,17 @@ var properties = casimir_core.properties(config_dir)
 ### RequestId
 
 ```js
+var settings = {
+  secret: 'secret',
+  namespace: 'servername'
+}
+var requestid = casimir_core.request_id(requestSettings)
 ```
 
 ### Router
 
 ```js
+var fs = require('fs')
 var GET_public = {
   "/path": {
     "function_name": "File.Function",
@@ -158,14 +145,10 @@ var GET_public = {
     "users": ["optionalPrivateUsers"]
   }
 }
-var contollers_dir = './controllers/'
-var routes = {
-  GET: { Public: GET_public, Private: GET_private },
-  POST: { Public: POST_public, Private: POST_private },
-  PUT: { Public: PUT_public, Private: PUT_private },
-  DELETE: { Public: DELETE_public, Private: DELETE_private }
-}
-var router = casimir_core.router(routes, contollers_dir, authentication)
+fs.writeFileSync(routes_dir + 'GET-public.json', GET_public) // can be similarly done for POST, PUT, DELETE and private
+var controllers_dir = './controllers/'
+var routes_dir = './routes/'
+var router = casimir_core.router(routes_dir, controllers_dir, authentication)
 ```
 
 ### Server
@@ -177,15 +160,11 @@ properties.modules = {
   validator: validator,
   router: router,
   error: error,
-  logger: logger
+  logger: logger,
+  requestid: requestid
 }
 // Set server and server port
 var server = casimir_core.server(properties)
-```
-
-### Setup
-
-```js
 ```
 
 ### Testing
