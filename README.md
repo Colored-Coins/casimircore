@@ -80,6 +80,11 @@ var settings = {
   host: 'host.mongodb.com',
   port: 27000,
   name: 'testDB',
+
+  // with URI - if provided, all previous connection settings are ignored
+  uri: 'mongodb://user:password@host.mongodb.com:27000/testDB',
+
+  // mongoose models directory
   dir: './db'
 }
 db.init(settings, mongoose, function (err, mongoose) {
