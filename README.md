@@ -182,7 +182,7 @@ $ npm test
 
 ## License
 
-MIT © [thehobbit85]()
+[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 [npm-image]: https://badge.fury.io/js/casimircore.svg
 [npm-url]: https://npmjs.org/package/casimircore
