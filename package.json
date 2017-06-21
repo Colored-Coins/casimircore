@@ -42,7 +42,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "aws-xray-sdk": "^1.0.5-beta",
+    "aws-xray-sdk": "1.0.5-beta",
     "body-parser": "^1.13.3",
     "clone": "^1.0.2",
     "compression": "^1.5.2",
